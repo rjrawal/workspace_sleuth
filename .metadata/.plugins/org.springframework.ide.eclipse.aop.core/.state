@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="discovery-server"/>
+<aop-project name="zipkins-server"/>
+<aop-project name="service-2"/>
+<aop-project name="service-1"/>
+</aop-reference-model>
