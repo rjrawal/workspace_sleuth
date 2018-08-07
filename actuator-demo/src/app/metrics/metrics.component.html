@@ -1,0 +1,6 @@
+<div *ngIf="metricList">
+  <p style="font-weight: 700">Metrics</p>
+  <ul>
+      <li *ngFor="let item of metricList.names" (click)="fetchMetricDetails(item)">{{item}}</li>
+  </ul>
+ </div> 

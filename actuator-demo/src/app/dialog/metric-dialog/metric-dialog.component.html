@@ -1,0 +1,24 @@
+
+<h2 mat-dialog-title>{{this.data.name}}</h2>
+<mat-dialog-content *ngIf="metricDetails">
+  <label>Available Tags</label>
+  <ul>
+    <li *ngFor="let item of metricDetails.availableTags">{{item.tag}}         
+      <ul>
+        <li *ngFor="let value of item.values">{{value}}</li>
+      </ul>
+    </li>
+  </ul>
+
+  <label>Measurements</label>
+  <ul>
+    <li *ngFor="let item of metricDetails.measurements">{{item.statistic}} {{item.value}}</li>
+  </ul>
+
+</mat-dialog-content>
+
+<mat-dialog-actions>
+    <button class="mat-raised-button" (click)="close()">Close</button>
+</mat-dialog-actions>
+
+

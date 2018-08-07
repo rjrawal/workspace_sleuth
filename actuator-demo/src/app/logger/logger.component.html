@@ -1,0 +1,24 @@
+<div *ngIf="loggerList">
+  <p style="font-weight: 700">
+    Logger Details
+  </p>
+
+  <label>Available log levels</label>
+  <ul>
+    <li *ngFor="let level of loggerList.levels">{{level}}</li>
+  </ul>  
+
+  <label>Available Loggers</label>
+  <table>
+    <tr>
+      <th>Logger Name</th>
+      <th>Configured Level</th>
+      <th>Effective Level</th>
+    </tr>
+      <tr *ngFor='let key of objectKeys(loggerList.loggers)'>
+        <td>{{key}}</td>
+        <td>{{loggerList.loggers[key].configuredLevel}}</td>
+        <td>{{loggerList.loggers[key].effectiveLevel}}</td>
+      </tr>
+  </table>
+</div>
